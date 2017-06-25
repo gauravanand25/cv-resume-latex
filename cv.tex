@@ -58,6 +58,12 @@
 % PAGE GEOMETRY
 \usepackage[top=1.0cm, bottom=1.5cm, lmargin=1.0cm, rmargin=1.8cm,ignoreheadfoot]{geometry} % The page Geometry
 
+% COLORS
+\definecolor{smokyblack}{rgb}{0.06, 0.05, 0.03}         %Darkest
+\definecolor{payne\'sgrey}{rgb}{0.25, 0.25, 0.28}       %Darkest
+\definecolor{davy\'sgrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{battleshipgrey}{rgb}{0.52, 0.52, 0.51}     %Lightest
+
 %----------------------------------------------------------------------------------------
 % CUSTOM ENVIRONMENTS
 %----------------------------------------------------------------------------------------
@@ -74,8 +80,8 @@
 
 \newcommand{\cproject}[5]{%
     \begin{tabular}{p{0.60\linewidth}r}
-        \textcolor{NavyBlue}{\small #2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft \small {\textsc{#1}}}\\
-        \small {#3} & \small {#4}
+        \textcolor{smokyblack}{\small #2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft \small {\textsc{#1}}}\\
+        \textcolor{payne\'sgrey}{\small #3} & \small {#4}
     \end{tabular}\\
     \begin{tabular}{p{0.98\linewidth}}
     \vspace{-0.3cm}
@@ -111,8 +117,24 @@
     \vspace{\verticalspacing{}}
 }
 
+\newcommand{\lineskill}[2]{%
+    \begin{tabular}{p{0.98\linewidth}r}
+        \small {#2} & \multicolumn{1}{m{ \projectheadspacing{} }}{\raggedleft \textsc{\small #1}}\\
+    \end{tabular}
+    \vspace{\verticalspacing{}}
+    \vspace{-0.0cm} % Needed for proper spacing
+}
+
 \newcommand{\github}{%
-    \includegraphics[height=9pt]{icons/octa.png}
+    \includegraphics[height=11pt]{icons/octa.png}
+}
+
+\newcommand{\email}{%
+    \includegraphics[height=11pt]{icons/email.png}
+}
+
+\newcommand{\linkedin}{%
+    \includegraphics[height=11pt]{icons/linkedin.png}
 }
 
 %----------------------------------------------------------------------------------------
@@ -134,15 +156,15 @@
         \multirow{3}{0.70\linewidth}{%
             \vfil
             {%
-                \addfontfeature{LetterSpace=20.0}\fontsize{20}{20}\selectfont\scshape
-                Srijan R. Shetty
+                \addfontfeature{LetterSpace=5.0}\fontsize{25}{20}\selectfont\scshape
+                {Gaurav }{Anand}
             }\\
-            \emph{Senior Undergraduate, Dept of Computer Science and Engineering}
+            \emph{Contact No.: +91-9871762105, DOB: 25\textsuperscript{th} Dec, 1993}
         }
 
-        & {\Large\Letter} {\href{mailto:srijan.shetty@gmail.com}{srijan.shetty@gmail.com}}\\
-        & {\github} {\href{https://github.com/srijanshetty}{@srijanshetty}}\\
-        & {\Large\Mundus} {\href{https://srijanshetty.in}{https://srijanshetty.in}}\\
+        & {\email} {\href{mailto:gauravanand25@gmail.com}{gauravanand25@gmail.com}}\\
+        & {\github} {\href{https://github.com/gauravanand25}{@gauravanand25}}\\
+        & {\linkedin} {\href{http://in.linkedin.com/in/gauravanand25}{gauravanand25}}\\
     \end{tabular}
     \vspace{-0.5cm}
     \section{}
@@ -158,19 +180,43 @@
 %   SKILL SET
 %----------------------------------------------------------------------------------------
 \highlight
-    {Skill Set}
+    {Technical Skills}
     {%
-        \itemlist {%
-                \textsc{\small Languages} %
-                & \textbf{JavaScript} (Expert), \textbf{Python} (Proficient), \textbf{C++} (Proficient),
-                \textbf{C} (Proficient), \textbf{R} (Intermediate)\\
-                \textsc{\small Web Dev} %
-                & \textbf{HTML5}, \textbf{CSS}, \textbf{SQL and NoSQL}, \textbf{AngularJS}, \textbf{Nodejs}\\
-                \textsc{\small Tools} %
-                & \textbf{Git} (Expert), \textbf{Shell Scripting} (Proficient), \textbf{Vim} (Expert),
-                \textbf{LaTeX} (Proficient)\\
-            }
+		\begin{tabular}{>{\raggedleft}p{2.1cm}p{14.6cm}r}
+
+   			\textsc{\small Languages} %
+            & {C/C++}, {Java}, {Python}, {R}, {Octave}\\
+			\textsc{\small Web Dev} %
+			& {SpringMVC}, {Django}, {HTML/CSS}, {Javascript} (AngularJS, D3.js), {AWS }(EC2, RDS, SNS, SQS, S3)\\
+			\textsc{\small Databases} %
+			& {Relational} (MySQL, Redshift), {NoSQL} (DynamoDB, Redis), {ORM} (Hibernate, SQLAlchemy)\\
+			\textsc{\small Miscellaneous} %
+			& {GPU (CUDA)}, {LaTeX}, {SVN/GIT}, {Lex/Yacc}\\
+
+		\end{tabular}
     }
+    
+%----------------------------------------------------------------------------------------
+%	SKILL SET
+%----------------------------------------------------------------------------------------
+
+%\section{Skill Set}
+%\def\arraystretch{1.2}
+%\begin{tabular}{>{\raggedleft}p{2.1cm}p{14.6cm}r}
+
+%   	\textsc{\small Languages} %
+%	& \textbf{C}, \textbf{C++}, \textbf{Java}, \textbf{Python}, \textbf{Octave/MATLAB}, \textbf{Bash}\\
+%	\textsc{\small Web Dev} %
+%	& \textbf{HTML5}, \textbf{Javascript} (AngularJS, D3.js), \textbf{CSS} (twitter bootstrap)\\
+%	\textsc{\small Databases} %
+%	& \textbf{Relational} (MySQL, Redshift), \textbf{NoSQL} (DynamoDB)\\
+%	\textsc{\small Miscellaneous} %
+%	& \textbf{SpringMVC}, \textbf{LaTeX} (Beginner), \textbf{SVN}, \textbf{GIT}, \textbf{AWS}\\
+	%\textsc{\small Version Control System} %
+	%& \textbf{SVN}, \textbf{GIT}
+
+%\end{tabular}
+%\def\arraystretch{1}
 
 %----------------------------------------------------------------------------------------
 %   RELEVANT COURSES
@@ -188,6 +234,16 @@
 %
 
 %----------------------------------------------------------------------------------------
+%   AREA OF INTEREST
+%----------------------------------------------------------------------------------------
+
+\section{Research Interests}
+
+\lineskill
+    {}
+    {Artificial Intelligence, Machine Learning, and Applied Mathematics.}
+	
+%----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
@@ -195,17 +251,17 @@
 \def\arraystretch{1.2}
 \begin{tabular}{>{\raggedleft}p{1.5cm}p{14.6cm}r}
 
-    \textsc{Current} & B. Tech, \textsc{Computer Science and Engineering},
-    \textbf{Indian Institute of Technology}, Kanpur
-    & \textbf{9.6/10.0}\\
+    \textsc{June 2015} & Bachelor of Engineering, Computer Engineering,
+    \href{http://nsit.ac.in/}{Netaji Subhas Institute of Technology}, Delhi University
+    & \textbf{74.61}\%\\
 
-    \textsc{July 2011} & 12$^{th}$ Board, \textsc{CBSE} Board,
-    \textbf{The Emerald Heights International School}, Indore
-    & \textbf{91.4}\% \\
+    \textsc{May 2011} & All India Senior Secondary School Examination (C.B.S.E),
+    \href{http://davdayanandvihar.net/}{Shaheed Rajpal D.A.V. Public School}, New Delhi
+    & \textbf{86.6}\%\\
 
-    \textsc{July 2009} & 10$^{th}$ Board, \textsc{ICSE} Board,
-    \textbf{The Laurels School International}, Indore
-    & \textbf{95.4}\% \\
+    \textsc{May 2009} & All India Secondary School Examination (C.B.S.E),
+    \href{http://davdayanandvihar.net/}{Shaheed Rajpal D.A.V. Public School}, New Delhi
+    & \textbf{87.6}\%\\
 
 \end{tabular}
 \def\arraystretch{1}
@@ -217,335 +273,311 @@
 % \section{Teaching}
 
 %----------------------------------------------------------------------------------------
-%   WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
-%
-\section{Work Experience}
-
-\cproject
-      {May - June 2015}
-      {Summer Intern}
-      {\textsc{Klozee.}, Bangalore}
-      {}
-      {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-          \item Automated developer operations by creating a heroku style push to deploy model on AWS.
-          \item Worked full stack on Express, Angular, Node and Angular to create a apparel store for the web app.
-        \end{itemize}
-      }
-
-\cproject
-    {2014 - 2015}
-    {Multi Factor Authentication in OpenVPN}
-    {\textsc{\raggedright Mozilla Winter of Security}, Guillaume Destuynder, Professor Dheeraj Sanghi}
-    {\href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA} {[Wiki]} }
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-          \item One of the \textbf{eleven} teams all over the \textbf{world} to be selected as a part of Mozilla's Winter of Security Initiative 2014.
-          \item The objective of the project was to implement true \textbf{arbitrary multi-factor authentication} support in
-              \textbf{OpenVPN}; and to implement \textbf{session-support} for the additional factors.
-          \item The project presentation is archived at
-              \href{https://air.mozilla.org/mwos-2014-openvpn-mfa/}{https://air.mozilla.org/mwos-2014-openvpn-mfa/}.
-          \item The wiki for the project is located at \href{https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA} {https://wiki.mozilla.org/Security/Mentorships/MWoS/2014/OpenVPN\_MFA}
-      \end{itemize}
-    }
-
-
-\cproject
-      {May-July 2014}
-      {Research Intern}
-      {\textsc{Microsoft Research India}, Bangalore}
-      {}
-      {%
-          \begin{itemize}[leftmargin=\bulletspace{}]
-              \item Analysed the implementations of different distributed systems and databases architectures like
-                  \textbf{Google MapReduce}, \textbf{Google FileSystem}, \textbf{Google MillWheel} \textbf{Yahoo! PNUTS},
-                  \textbf{Amazon DynamoDB}, \textbf{Apache Hadoop}, \textbf{Apache Storm}, \textbf{Microsoft Dryad},
-                  and \textbf{Microsoft DryadLINQ} to understand the design decisions involved.
-              \item Used \textbf{TPL Dataflow} and \textbf{Lightweight Tasks} to implement concurrent pipeline
-                  processing of messages in CScale to preserve processing ord
-                  er of partially ordered messages.
-                  Performed \textbf{performance testing}, \textbf{failure testing} of the existing infrastructure.
-          \end{itemize}
-     }
-
-\cproject
-    {May-July 2013}
-    {Software Development Intern}
-    {\textsc{Aurus Networks'}, Bangalore}
-    {}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Ported the legacy flash based web player in \textbf{CourseHub} --- Aurus Networks'
-                MOOC offering --- to a technology agnostic \textbf{HTML5/JavaScript} web player leading
-                to a uniform cross-platform viewing experience.
-            \item Developed a \textbf{XMPP} based \textbf{real-time chat service} using Jabber framework,
-                for conversations during live lectures.
-        \end{itemize}
-    }
-
-%----------------------------------------------------------------------------------------
 %   Awards and Achievements
 %----------------------------------------------------------------------------------------
 \section{Awards and Achievements}
 
 \itemlist {%
-    \textsc{\small May 2015}    & Achieved a rank of \textbf{53} in
-                                  \href{https://www.kaggle.com/c/bike-sharing-demand/leaderboard}
-                                  {Kaggle's Bike Sharing Demand} Machine Learning Competition. \\
-    \textsc{\small 2011-2015}   & Students' \textbf{Gymkhana Leadership Award}, IIT Kanpur. \\
-    \textsc{\small 2011-2014}   & Received an \textbf{A* grade}, for exceptional performance in
-                                    \textbf{Systems and Network Security};
-                                    \textbf{Computer Networks};
-                                    \textbf{Computer Organization};
-                                    \textbf{Logic for Computer Science};
-                                    \textbf{Fundamentals of Computing};
-                                    \textbf{Introduction to Philosophy} \\
-    \textsc{\small 2012-2013}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
-    \textsc{\small 2011-2012}   & \textbf{Academic Excellence Award}, IIT Kanpur. \\
-    \textsc{\small May 2011}    & Secured All India rank \textbf{1937} in Joint Entrance Exam (JEE) \\
-    \textsc{\small Jan 2011}    & Kishore Vaigyanik Protsahan Yojana (\textbf{KVPY}) Fellowship \\
-    \textsc{\small Jan 2010}    & Qualified \textbf{Regional Mathematics Olympiad} (RMO) \\
-    \textsc{\small Dec 2009}    & \textbf{CSIR Programme on Youth for Leadership in Science} held at
-                                  Advanced Materials Research Institute, Bhopal\\
+    %\textsc{\small May 2015}    & Achieved a rank of \textbf{53} in
+    %                             \href{https://www.kaggle.com/c/bike-sharing-demand/leaderboard}
+    %                             {Kaggle's Bike Sharing Demand} Machine Learning Competition. \\
+    \textsc{\small Oct 2013} 		&\href{https://www.codechef.com/rankings/ACMKGP13} {5\textsuperscript{th} place} in the \href{https://www.codechef.com/ACMKGP13} {ACM-ICPC Asia-Kharagpur} Online Round with team name \href{https://www.codechef.com/teams/view/acmkg13tm154} {clueless\_idiots}  out of 822 teams.\\
+    \textsc{\small 2012-2015}  	& Awarded with merit scholarship by Delhi University for excellence in academics.\\
+	\textsc{\small May 2011}		& Secured an All India Rank \textbf{2325} (Top \textbf{0.2\%}) in All India Engineering Entrance Exam among a million aspirants.\\
+    \textsc{\small May 2011}		& Secured an All India Rank \textbf{3548} (Top \textbf{0.7\%}) in Joint Entrance Examination to IITs among half a million aspirants.\\
+	\textsc{\small Jan 2011}		& Awarded with the \href{http://www.kvpy.iisc.ernet.in/main/index.htm}{\textbf{KVPY}} fellowship in SB+2 stream by Department of Science and Technology, Govt. of India.\\
 }
 
 
 %----------------------------------------------------------------------------------------
+%   WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+%
+\section{Work Experience}
+\cproject
+      {Feb, 2016 - Current}
+      {\href{http://www.adobe.com/}{\textbf{Adobe Systems}}, Noida, India}
+      {Member of Technical Staff, InDesign Team}
+      {}%{\href{http://www.adobe.com/products/indesign.html} {[InDesign]}}
+      {%
+          \begin{itemize}[leftmargin=\bulletspace{}]
+              \item InDesign is C++ based page design and layout software to create digital content like books, posters,  brochures, magazines, and newspapers.
+              \item Currently working on \textbf{Suggesting Aesthetic Layout for Document}, involves GPU Programming.
+          \end{itemize}
+     }
+     
+\cproject
+      {Jun, 2015 - Jan, 2016}
+      {\href{http://www.codenation.co.in}{\textbf{Codenation}}, Bangalore, India}
+      {Software Developer Engineer}
+      {}
+      {%
+          \begin{itemize}[leftmargin=\bulletspace{}]
+              \item Worked in the team that develops actionable insights to measure and maintain code quality of codebases.
+              \item Developed a product which selects the \textbf{minimum regression test suite} based on the changes in the code which reduced \textbf{70\%} of the expenditure on AWS cloud services.
+          \end{itemize}
+     }
+     
+\cproject
+      {Jun - Jul, 2014}
+      {\href{http://www.codenation.co.in}{\textbf{Codenation}}, Dubai, UAE}
+      {Software Developer Intern}
+      {}
+      {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+          \item Designed and developed an extensible web application framework to dynamically create, delete and manage resource instances such as databases, queues, topics on AWS.
+        \end{itemize}
+      }
+
+%----------------------------------------------------------------------------------------
 %  PROJECTS
 %----------------------------------------------------------------------------------------
-\vspace{-0.65cm}
-\let\thefootnote\relax\footnote{Monsoon semester: July to November}
-\let\thefootnote\relax\footnote{Winter Semester: January to April}
+%\vspace{-0.65cm}
+%\let\thefootnote\relax\footnote{Last Update on: 27th Oct, 2015}
+%\let\thefootnote\relax\footnote{Winter Semester: January to April}
 \section{Projects}
 
 \cproject
-    {Winter 2014-2015}
-    {Data Sensitive Hashing}
-    {\textsc{\raggedright Indexing and Searching Techniques in Databases}, Professor Arnab Bhattacharya}
-    {\href{https://github.com/srijanshetty/data-sensitive-hashing} {[GitHub]}}
+    {Jan - Jun, 2015}
+    {\textbf{Bid Price Estimation for Players in Cricket League Auctions}}
+    {\textsc{\raggedright Bachelor's Thesis Project}}
+    {}
     {%
         \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Extended data sensitive hashing using standard Locality Sensitive Hashing extensions
-             to compare effectiveness.
-            \item Implemented entropy based dsh, and multiprobe dsh and analysed relative performance with
-             respect to dsh.
+            \item Applied SMO Algorithm to train Support Vector Regression which achieved an accuracy of 92\%. Modelled data separately for batsmen, bowlers, all-rounders for their international and league match records.
         \end{itemize}
     }
 
 \cproject
-    {Winter 2013-2014}
-    {JavaScript to MIPS Compiler}
-    {\textsc{\raggedright Compilers}, Professor Subhajit Roy}
-    {\href{https://github.com/srijanshetty/javascript-compiler} {[GitHub]}}
+    {Dec, 2014}
+    {\textbf{Movie Genre Classification based on Plot Summary}}
+    {\textsc{\raggedright Minor Project}}
+    {}
     {%
         \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Implemented an end-to-end ECMAScript 5.1 compiler for the MIPS architecture with support for first class
-                functions, anonymous functions, static types, type annotations, recursion and nested functions.
+            \item Trained neural network  using backpropogation algorithm and, one-vs-all SVM technique to classify movie genres with a precision of 0.78.
+        \end{itemize}
+    }
+    
+\section{Course Projects}
+\cproject
+    {Nov, 2014}
+    {\textbf{Movie Recommender and Rating Prediction System}}
+    {\textsc{\raggedright Machine Learning Course}}
+    {}
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Applied collaborative filtering technique to generate recommendations and predict user ratings using MovieLens ml-100k dataset having 100,000 ratings from 943 users on 1682 movies.
+        \end{itemize}
+    }
+    
+\cproject
+    {Oct, 2014}
+    {\textbf{Email Spam Classification}}
+    {\textsc{\raggedright Machine Learning Course}}
+    {}
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+        	   \item Applied SVM classifier to detect spams with an acccuracy of 98.5\% using SpamAssassin public corpus.
+        \end{itemize}
+    }
+    
+\cproject
+    {Sep, 2014}
+    {\textbf{Handwritten Digit recognition}}
+    {\textsc{\raggedright Machine Learning Course}}
+	{}
+    {%
+        \begin{itemize}[leftmargin=\bulletspace{}]
+            \item Applied backpropogation algorithm to train neural network in recognizing handwritten digits. Achieved an accuracy of 98.7\% on the MNIST database.
         \end{itemize}
     }
 
-\cproject
-    {Winter 2013-2014}
-    {Hindi author attribution}
-    {\textsc{\raggedright Artificial Intelligence}, Professor Amitabha Mukherjee}
-    {\href{https://github.com/srijanshetty/author-attribution} {[GitHub]}}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Presented a poster on Opinion Word Expansion and Target Extraction through Double Propogation, Guang Qin,
-                Bing Liu, Jiajun Bu, Chun Chen that was nominated as the best poster by all students.
-            \item Generated a Hindi literature corpus consisting of works by Tagore,
-                Vibhuti Narayan, Premchand, Sarat Chattopadhyay and Dhamarvir Bharati.
-            \item Clustered a sample set of multiple Hindi authors using K-means unsupervised clustering to achieve
-                F-scores in the range of 90-97\% for each author.
-            \item Classified each author using Support Vector Machine using Radial Basis Kernel function
-                and achieved an F-score of 90--95\% for each author.
-            \item Performed Multiple Discriminant Analysis on the data for a quantitative comparison with word
-                collocations; there was no appreciable difference in the results with the F-scores increasing only
-                marginally.
-        \end{itemize}
-    }
-
-\cproject
-    {Monsoon 2013-2014}
-    {NachOS}
-    {\textsc{Operating Systems}, Professor Mainak Chaudhari}
-    {\href{https://github.com/srijanshetty/nachos} {[GitHub]}}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Extended the standard system call library of NachOS and implemented system calls pertaining to Fork, Exec,
-                Join, Yield, Sleep and Exit.
-            \item Implemented process scheduling algorithms: UNIX Scheduling, First in First Out,
-                Round Robin, Shortest Job First and Non-pre-emptive job scheduling to assess their relative performances.
-            \item Programmed page replacement algorithms: Random Page Allocation, First in First Out,
-                Least Recently Used(LRU) and LRU Clock to evaluate relative performances under difference scenarios.
-        \end{itemize}
-    }
-
-\cproject
-    {Winter 2012-2013}
-    {8-bit General Purpose Computer on a FPGA}
-    {\textsc{Computer Organization}, Professor Subhajit Roy}
-    {\href{https://github.com/srijanshetty/220\_y11} {[GitHub]}}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Designed and programmed a simple \textbf{Instruction set Architecture (ISA)} for a 8-bit General
-                Purpose Computer with a \textbf{load-store}
-                architecture on \textbf{Xilinx Spartan 3 FPGA} using System Verilog.  Demonstrated recursion, looping
-                and conditionals on the Computer by using a simple assembly language.
-        \end{itemize}
-    }
 
 %----------------------------------------------------------------------------------------
 %  INDEPENDENT PROJECTS
 %----------------------------------------------------------------------------------------
 % \section{Independent Projects}
 
-\cproject
-    {Winter 2014-2015}
-    {VS-3, Electronic Voting}
-    {Election Council, IIT Kanpur}
-    {\href{https://github.com/srijanshetty/elections} {\small{[GitHub]}}}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Designed and created a new electronic voting system in consultation with the \textbf{Students' Senate}
-                to facilitate smooth electonic voting in the campus.
-            \item The voting system was subsequently used in Students'
-                Gymkhana General Elections, Hall 8 HEC Elections, Hall 2 HEC Elections and Hall 4 HEC Elections.
-        \end{itemize}
-    }
-
-\cproject
-    {Summer 2012-2013}
-    {VANI - Voicing Archiving and Networking Information}
-    {Professor Manidra Agarwal, Professor T. V. Prabhakar}
-    {}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Initiated the creation of VANI - an extensible community platform with applications
-                for forums, wikis, search, lost and found and calendars.
-        \end{itemize}
-    }
+%\cproject
+%    {Winter 2014-2015}
+%    {VS-3, Electronic Voting}
+%    {Election Council, IIT Kanpur}
+%    {\href{https://github.com/srijanshetty/elections} {\small{[GitHub]}}}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%            \item Designed and created a new electronic voting system in consultation with the \textbf{Students' Senate}
+%                to facilitate smooth electonic voting in the campus.
+%            \item The voting system was subsequently used in Students'
+%                Gymkhana General Elections, Hall 8 HEC Elections, Hall 2 HEC Elections and Hall 4 HEC Elections.
+%        \end{itemize}
+%    }
 
 %----------------------------------------------------------------------------------------
 %   OTHER SKILLS
 %----------------------------------------------------------------------------------------
-
-\section {Leadership Skills}
-
-\gitproject
-    {2014 - 2015}
-    {Chief Election Officer, Election Council, IIT Kanpur}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Conducted General Elections, Student's Gymkhana 2014 and
-                Girls Representative Elections, Students' Gymkhana 2014.
-            \item Developed a new voting software from ground up to cater to the needs of IIT Kanpur.
-        \end{itemize}
-    }
-
-\gitproject
-    {2014 - 2015}
-    {Head, Major Events and Competitions, Antaragni '14}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Orchestrated Roadtrip --- the National Campaign of Antaragni '14, under which national
-                prelims for Nukkad, Dance, Quiz and Synchronicity were held in Pune, Mumbai, Chennai,
-                Bangalore, Chandigarh, Bhopal, Lucknow, Kolkata, and Kanpur.
-            \item Negotiated with leading academies of Dance, Musicals, and Fine Arts to provide mentorships,
-                and other non-monetary incentives to the outstanding cultural performers in Antaragni
-                under the banner of \textbf{Dream On} campaign.
-            \item Coordinated the conduction of \textbf{fifty competitions and nine major events} with a team
-                comprising of over \textbf{thousand volunteers}.  Initiated and organized Mr. \& Ms. Fresher's
-                competition and introduced Chreo Night in Antaragni's arsenal of competitions.
-            \item Organized a \textbf{blood donation camp} for the residents of IIT Kanpur to promote awarness
-                about road accidents.  Mobilized information about \textbf{road safety} through infographics
-                and questionnaires via Antaragni's nation wide social campaign \textbf{Zara Sambhal Ke}.
-        \end{itemize}
-    }
-
-\gitproject
-    {2013 -- 2014}
-    {Hospitality Coordinator, Antaragni '13}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Managed a team of \textbf{40 secretaries and 80 volunteers}, over a span of 8 months and ensured a
-                flawless conduction of the festival.
-            \item Chalked out the logistics of \textbf{hospitality and accommodation} of \textbf{1500 participants}
-                with four other coordinators.  Handled security arrangements during the four days of the
-                Festival from 24$^{th}$ to 27$^{th}$ October.
-        \end{itemize}
-    }
-
-\skill
-    {2013 -- 2014}
-    {Member, Gymkhana Review Committee}
-
-\skill
-    {2013 -- 2014}
-    {Editor-in-chief, Vox Populi, the campus newsletter.}
-
-\skill
-    {2012 -- 2013}
-    {Senator, Students' Senate, IITK Y11 batch.}
+%
+%\section {Leadership Skills}
+%
+%\gitproject
+%    {2014 - 2015}
+%    {Chief Election Officer, Election Council, IIT Kanpur}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%            \item Conducted General Elections, Student's Gymkhana 2014 and
+%                Girls Representative Elections, Students' Gymkhana 2014.
+%            \item Developed a new voting software from ground up to cater to the needs of IIT Kanpur.
+%        \end{itemize}
+%    }
+%
+%\gitproject
+%    {2014 - 2015}
+%    {Head, Major Events and Competitions, Antaragni '14}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%            \item Orchestrated Roadtrip --- the National Campaign of Antaragni '14, under which national
+%                prelims for Nukkad, Dance, Quiz and Synchronicity were held in Pune, Mumbai, Chennai,
+%                Bangalore, Chandigarh, Bhopal, Lucknow, Kolkata, and Kanpur.
+%            \item Negotiated with leading academies of Dance, Musicals, and Fine Arts to provide mentorships,
+%                and other non-monetary incentives to the outstanding cultural performers in Antaragni
+%                under the banner of \textbf{Dream On} campaign.
+%            \item Coordinated the conduction of \textbf{fifty competitions and nine major events} with a team
+%                comprising of over \textbf{thousand volunteers}.  Initiated and organized Mr. \& Ms. Fresher's
+%                competition and introduced Chreo Night in Antaragni's arsenal of competitions.
+%            \item Organized a \textbf{blood donation camp} for the residents of IIT Kanpur to promote awarness
+%                about road accidents.  Mobilized information about \textbf{road safety} through infographics
+%                and questionnaires via Antaragni's nation wide social campaign \textbf{Zara Sambhal Ke}.
+%        \end{itemize}
+%    }
+%
+%\gitproject
+%    {2013 -- 2014}
+%    {Hospitality Coordinator, Antaragni '13}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%            \item Managed a team of \textbf{40 secretaries and 80 volunteers}, over a span of 8 months and ensured a
+%                flawless conduction of the festival.
+%            \item Chalked out the logistics of \textbf{hospitality and accommodation} of \textbf{1500 participants}
+%                with four other coordinators.  Handled security arrangements during the four days of the
+%                Festival from 24$^{th}$ to 27$^{th}$ October.
+%        \end{itemize}
+%    }
+%
+%\skill
+%    {2013 -- 2014}
+%    {Member, Gymkhana Review Committee}
+%
+%\skill
+%    {2013 -- 2014}
+%    {Editor-in-chief, Vox Populi, the campus newsletter.}
+%
+%\skill
+%    {2012 -- 2013}
+%    {Senator, Students' Senate, IITK Y11 batch.}
 
 %----------------------------------------------------------------------------------------
 %   COMMUNITY SERVICE
 %----------------------------------------------------------------------------------------
 
-\section{Volunteer Work}
-
-\gitproject
-    {2014 -- 2015}
-    {Member, Institute Anti Ragging Committee}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Appointed as a member of the Institute Anti Ragging Committee, \textbf{a 10 member committee} responsible
-                for welfare of the newly admitted freshmen.
-            \item Worked in tandem with the office of the Dean of Student Affairs, to organize sessions
-                on \textbf{easing the transition of freshmen}.  Ensured institute norms regarding humane treatment
-                of freshmen are properly conveyed to all senior batches and worked towards the enforcement of those norms.
-        \end{itemize}
-    }
-
-\cproject
-    {2013 -- 2014}
-    {Tutor, English Proficiency Programme}
-    {Professor Bhaskar Das Gupta}
-    {}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Worked as a \textbf{English tutor} in the pilot English Proficiency Programme to help
-                \textbf{under-privileged students} obtain a functional knowlege of English.
-        \end{itemize}
-    }
-
-\skill
-    {2012 -- 2013}
-    {Academic Mentor, Fundamentals of Computing, Professor Sumit Ganguly}
+%\section{Volunteer Work}
+%
+%\gitproject
+%    {2014 -- 2015}
+%    {Member, Institute Anti Ragging Committee}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%            \item Appointed as a member of the Institute Anti Ragging Committee, \textbf{a 10 member committee} responsible
+%                for welfare of the newly admitted freshmen.
+%            \item Worked in tandem with the office of the Dean of Student Affairs, to organize sessions
+%                on \textbf{easing the transition of freshmen}.  Ensured institute norms regarding humane treatment
+%                of freshmen are properly conveyed to all senior batches and worked towards the enforcement of those norms.
+%        \end{itemize}
+%    }
+%
+%\cproject
+%    {2013 -- 2014}
+%    {Tutor, English Proficiency Programme}
+%    {Professor Bhaskar Das Gupta}
+%    {}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%            \item Worked as a \textbf{English tutor} in the pilot English Proficiency Programme to help
+%                \textbf{under-privileged students} obtain a functional knowlege of English.
+%        \end{itemize}
+%    }
+%
+%\skill
+%    {2012 -- 2013}
+%    {Academic Mentor, Fundamentals of Computing, Professor Sumit Ganguly}
 
 %----------------------------------------------------------------------------------------
 %   EXTRA-CURRICULAR ACTIVITIES
 %----------------------------------------------------------------------------------------
 
-\section{Extra-Curricular Activities}
+\section{Miscellaneous Activities}
 
-\skill {\href{srijanshetty.quora.com} {[Blog]}}
-       {Sporadic blogger at \href{srijanshetty.in} {srijanshetty.in}}
+%\skill {\href{srijanshetty.quora.com} {[Blog]}}
+%       {Sporadic blogger at \href{srijanshetty.in} {srijanshetty.in}}
+%
+%\gitproject
+%    {\href{https://github.com/navya} {\small{[Site]}}}
+%    {Hacker, Navya, FOSS Group IIT Kanpur}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%            \item Promoted the \textbf{FOSS initiative} in campus by organizing \textbf{student lectures} and meet-ups.
+%            \item Built student-centric applications like \textbf{Course Search and Student Search}, to circumvent
+%                their legacy institute counterparts.
+%        \end{itemize}
+%    }
+%
+%\skill
+%    {\href{https://github.com/srijanshetty} {\small{[GitHub]}}}
+%    {Active contributor to numerous open source projects}
 
-\gitproject
-    {\href{https://github.com/navya} {\small{[Site]}}}
-    {Hacker, Navya, FOSS Group IIT Kanpur}
-    {%
-        \begin{itemize}[leftmargin=\bulletspace{}]
-            \item Promoted the \textbf{FOSS initiative} in campus by organizing \textbf{student lectures} and meet-ups.
-            \item Built student-centric applications like \textbf{Course Search and Student Search}, to circumvent
-                their legacy institute counterparts.
-        \end{itemize}
-    }
+%\skill
+%	{}
+%	{}
+%    {Regularly participated in competitive programming contests held on various sites like codeforces, codechef, topcoder.\\
+%    \\
+%    username: gauravanand25}
+%    {%
+%        \begin{itemize}[leftmargin=\bulletspace{}]
+%        	   \item Codechef Max Rating: 2562 (Among top 350 Indians)
+%            \item Codeforces Max Rating : 1708 (Among top 250 Indians)
+%            \item Topcoder  Max Rating: 1116 (Among top 300 Indians)
+%        \end{itemize}
+%    }
 
-\skill
-    {\href{https://github.com/srijanshetty} {\small{[GitHub]}}}
-    {Active contributor to numerous open source projects}
+\lineskill
+	{}
+    {Actively participated in competitive programming contests held on various sites like codeforces, codechef, topcoder.}
 
+\lineskill
+	{}
+	{Our team ranked 2nd in Dunnhumby India hackathon and was awarded a cash prize equivalent to 1200 USD for the challenge.}
+
+\lineskill
+	{}
+	{Completed various courses from Coursera, Udacity on Machine Learning, Probabilistic Graphical Models 1: Representation, Game without Chance: Combinatorial Game Theory, R Programming, Statistical Inference and some in-progress courses are Reinforcement Learning, Intro to Computer Vision, Game Theory, Neural Network for Machine Learning.}
+	
+\lineskill %\skill
+	{}
+	{Lead NSIT at Delhi University Inter-College Chess team securing 3\textsuperscript{rd} position in (2015).}
+
+%\lineskill
+%	{}
+%	{Stood overall first in IIIT Delhi's fest ESYA’14 and came first in many events.}
+
+%----------------------------------------------------------------------------------------
+%   MISCELLANEOUS
+%----------------------------------------------------------------------------------------
+
+\section{Extracurricular}
+
+\lineskill
+    {}
+    {Enjoy swimming, playing chess, lawn tennis and table tennis.}
+
+\vspace{-0.65cm}
+\let\thefootnote\relax\footnote{Last Update on: June 20, 2017}
 \end{document}
