@@ -11,7 +11,7 @@
 ```
 $ xelatex cv.tex
 
-\# or get [tectonic](https://tectonic-typesetting.github.io/en-US/install.html)
+# or get [tectonic](https://tectonic-typesetting.github.io/en-US/install.html)
 
 $ tectonic cv.tex
 ```
